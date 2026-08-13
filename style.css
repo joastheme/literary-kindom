@@ -1,35 +1,30 @@
-body
-{
- background-color: #f5f0df;
+body {
+    background-color: #f5f0df;
 }
-h2
-{
+h2 {
     box-shadow: o 10px 20px;
     color: #BF6A39;
     
 }
-.main{
+nav {
     display: flex;
-    gap: 10vw      ;
+    gap: 10vw;
 }
-.text
-{
+
+.text {
     text-align: center;
     padding-top: 20vh;
 }
-a
-{
+a {
     text-decoration: none;
-        color: inherit ;
+    color: inherit;
 }
-a:hover
-{
+a:hover {
     color: #F2B441;
 }
-img
-{
-    padding-top: 30px   ;
+img {
+    padding-top: 30px;
     height: 20px;
-     width: 20px;
-     transform: translateX(-10vw);
+    width: 20px;
+    transform: translateX(-10vw);
 }
