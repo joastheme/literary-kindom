@@ -1,0 +1,35 @@
+body
+{
+ background-color: #f5f0df;
+}
+h2
+{
+    box-shadow: o 10px 20px;
+    color: #BF6A39;
+    
+}
+.main{
+    display: flex;
+    gap: 10vw      ;
+}
+.text
+{
+    text-align: center;
+    padding-top: 20vh;
+}
+a
+{
+    text-decoration: none;
+        color: inherit ;
+}
+a:hover
+{
+    color: #F2B441;
+}
+img
+{
+    padding-top: 30px   ;
+    height: 20px;
+     width: 20px;
+     transform: translateX(-10vw);
+}
