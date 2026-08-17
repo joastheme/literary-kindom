@@ -2,7 +2,7 @@
 
 let forum = document.querySelector("#forum");
 
-let topics;
+let topics; // = supabase (ahisbiadsa);
 
 /* Inicializar topics com uma lista de objetos com atributos de cada tópico, atributos esses que estão no db. Algo como:
 {

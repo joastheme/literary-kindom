@@ -15,6 +15,8 @@
 
 body {
     background-color: #f5f0df;
+    height: 100vh;
+    overflow: hidden;
 }
 * {
     font-family: crimson;
@@ -25,10 +27,14 @@ h2 {
 }
 nav {
     display: flex;
+    height: 10vh;
     gap: 10vw;
     border-bottom-color: black;
     border-bottom-style: solid;
     border-bottom-width: 0.1vh;
+}
+nav, main, footer {
+    padding: 0% 5%;
 }
 a {
     text-decoration: none;
@@ -43,5 +49,33 @@ img {
     width: 20px;
     transform: translateX(-10vw);
 }
+main {
+    display: flex;
+    justify-content: space-between;
+}
 
 /* --------------- SPECIFIC --------------- */
+
+#something, #something2 {
+    padding-top: 3vh;
+    width: 20%;
+}
+
+#mainsection {
+    padding-top: 3vh;
+    width: 50%;
+    overflow: scroll;
+}
+
+#mainsection, #something, #something2 {
+    height: 85vh;
+}
+
+#forum div {
+    padding: 0% 2%;
+
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px
+}
