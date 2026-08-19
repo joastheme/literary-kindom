@@ -82,7 +82,9 @@ main {
     height: calc(85vh - 50px);
     overflow: auto;
 }
-
+#forum::webkit-scroll-bar {
+    display: none;
+}
 #forum div {
     padding: 0% 2%;
     margin-bottom: 2vh;
