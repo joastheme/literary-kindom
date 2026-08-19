@@ -82,7 +82,7 @@ main {
     height: calc(85vh - 50px);
     overflow: auto;
 }
-#forum::webkit-scroll-bar {
+#forum::-webkit-scrollbar {
     display: none;
 }
 #forum div {
