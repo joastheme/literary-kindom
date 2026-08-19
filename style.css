@@ -27,7 +27,6 @@ h2 {
 }
 nav {
     display: flex;
-    height: 10vh;
     gap: 10vw;
     border-bottom-color: black;
     border-bottom-style: solid;
@@ -36,6 +35,9 @@ nav {
 nav, main, footer {
     padding: 0% 5%;
 }
+img {
+    width: 100%;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -43,18 +45,19 @@ a {
 a:hover {
     color: #F2B441;
 }
-img {
-    padding-top: 30px;
-    height: 20px;
-    width: 20px;
-    transform: translateX(-10vw);
-}
 main {
     display: flex;
     justify-content: space-between;
 }
 
 /* --------------- SPECIFIC --------------- */
+
+#littlestar {
+    padding-top: 30px;
+    height: 20px;
+    width: 20px;
+    transform: translateX(-10vw);
+}
 
 #something, #something2 {
     padding-top: 3vh;
@@ -64,18 +67,28 @@ main {
 #mainsection {
     padding-top: 3vh;
     width: 50%;
-    overflow: scroll;
 }
+/*
+#forum::-webkit-scrollbar {
+    display: none;
+}
+*/
 
 #mainsection, #something, #something2 {
     height: 85vh;
 }
 
+#forum {
+    height: calc(85vh - 50px);
+    overflow: auto;
+}
+
 #forum div {
     padding: 0% 2%;
+    margin-bottom: 2vh;
 
     border: 1px;
     border-color: black;
     border-style: solid;
-    border-radius: 20px
+    border-radius: 20px;
 }
