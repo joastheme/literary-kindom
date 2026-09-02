@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: minecraft;
-    src: url("fonts/Minecraft.ttf");
+    src: url("assets/fonts/Minecraft.ttf");
 }
 @font-face {
     font-family: crimson;
-    src: url("fonts/Crimson/CrimsonText-Regular.ttf");
+    src: url("assets/fonts/Crimson/CrimsonText-Regular.ttf");
 }
 
 body {
@@ -25,7 +25,7 @@ h1 {
     color: #53593D;
 }
 h2 {
-    box-shadow: o 10px 20px;
+    box-shadow: 10px 20px;
     color: #BF6A39;
 }
 nav {
@@ -36,7 +36,7 @@ nav {
     border-bottom-width: 0.1vh;
 }
 nav, main, footer {
-    padding: 0% 5%;
+    padding: 0 5%;
 }
 img {
     width: 100%;

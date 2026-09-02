@@ -1,8 +1,10 @@
+import supabase from "./db.js";
+
 /* Selecionar a seleção dos fóruns, buscar no banco de dados os fóruns por popularidade, escolhe os x primeiros e cria um div pra cada */
 
-let forum = document.querySelector("#forum");
+const {data} = await supabase.from("topics").select("*");
 
-let topics; // = supabase (ahisbiadsa);
+console.log(data);
 
 /* Inicializar topics com uma lista de objetos com atributos de cada tópico, atributos esses que estão no db. Algo como:
 {
@@ -20,13 +22,19 @@ Os posts são do tipo:
 sendo topic_id o tópico que o post faz parte
 */
 
-topics.forEach(topic => {
-    div = document.createElement("div");
-    forum.appendChild(div);
+let forum = document.querySelector("#forum");
 
-    topic_title = document.createElement("h1");
-    topic_title.textContent = topic["main_post"]["title"];
+data.forEach(topic => {
+    console.log(topic);
+    const div = document.createElement("div");
+    forum.appendChild(div);
+    const topic_title = document.createElement("h1");
+    topic_title.textContent = topic.main_post_title;
     div.appendChild(topic_title);
+    const topic_text = document.createElement("p");
+    topic_text.textContent = topic.main_post_text;
+    div.appendChild(topic_text);
+    div.classList.add("topico")
     /* Dentre outras */
 });
 
