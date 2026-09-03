@@ -63,6 +63,10 @@ main {
     flex-direction: column;
 }
 
+.text-right {
+    text-align: right;
+}
+
 #littlestar {
     padding-top: 30px;
     height: 20px;
