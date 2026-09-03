@@ -25,14 +25,14 @@ sendo topic_id o tópico que o post faz parte
 let forum = document.querySelector("#forum");
 
 data.forEach(topic => {
-    console.log(topic);
+    const {title, content} = topic;
     const div = document.createElement("div");
     forum.appendChild(div);
     const topic_title = document.createElement("h1");
-    topic_title.textContent = topic.main_post_title;
+    topic_title.textContent = title;
     div.appendChild(topic_title);
     const topic_text = document.createElement("p");
-    topic_text.textContent = topic.main_post_text;
+    topic_text.textContent = content;
     div.appendChild(topic_text);
     div.classList.add("topico")
     /* Dentre outras */
