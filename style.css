@@ -12,14 +12,17 @@
     font-family: crimson;
     src: url("assets/fonts/Crimson/CrimsonText-Regular.ttf");
 }
-
+* {
+    font-family: crimson;
+    margin: 0;
+}
 body {
     background-color: #FFFFEF;
     height: 100vh;
     overflow: hidden;
 }
-* {
-    font-family: crimson;
+h1, h2, p {
+    padding: 0.25em 0;
 }
 h1 {
     color: #53593D;
@@ -28,14 +31,15 @@ h2 {
     color: #BF6A39;
 }
 nav {
+    height: auto;
     display: flex;
-    gap: 10vw;
-    border-bottom-color: black;
-    border-bottom-style: solid;
-    border-bottom-width: 0.1vh;
+    padding: 2.5vh 5vw;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1vh solid black;
 }
-nav, main, footer {
-    padding: 0 5%;
+main, footer {
+    padding: 0 5vw;
 }
 img {
     width: 100%;
@@ -48,8 +52,8 @@ a:hover {
     color: #F2B441;
 }
 main {
-    display: flex;
     justify-content: space-between;
+    height: calc(100vh - 43px);
 }
 
 /* --------------- SPECIFIC --------------- */
@@ -62,13 +66,14 @@ main {
     display: flex;
     flex-direction: column;
 }
-
+.links {
+    gap: 5vw;
+}
 .text-right {
     text-align: right;
 }
 
 #littlestar {
-    padding-top: 30px;
     height: 20px;
     width: 20px;
     transform: translateX(-10vw);
@@ -83,49 +88,21 @@ main {
     padding-top: 3vh;
     width: 50%;
 }
-#type {
-    height: 20vh;
-    margin-bottom: 2vh;
-}
-#type textarea {
-    margin-top: 1.5vh;
-    resize: none;
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    flex: 1;
-}
-#type textarea:focus {
-    outline: none;
-    box-shadow: none;
-}
-#type-foot {
-    flex: 0;
-    justify-content: space-between;
-    margin-bottom: 1vh;
-}
-
-#forum::-webkit-scrollbar {
-    display: none;
-}
-
 #mainsection, #something, #something2 {
+    padding-top: 0;
     height: 100%;
 }
 
-#forum {
-    height: calc(85vh - 50px);
-    overflow: auto;
-}
-#forum::-webkit-scrollbar {
-    display: none;
-}
-.topico, #type {
-    padding: 0% 2%;
+.topico, #type, .reply {
     margin-bottom: 2vh;
-
     border: 1px;
     border-color: black;
     border-style: solid;
     border-radius: 10px;
+}
+.topico, #type, .reply {
+    padding: 1.5vh 1vw;
+}
+.reply {
+    flex: 1;
 }

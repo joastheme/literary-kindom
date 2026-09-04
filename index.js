@@ -1,14 +1,19 @@
+let forum = document.querySelector("#forum");
+
+// Ajuste de estilo
+let nav = document.querySelector("nav");
+forum.style.height = `${window.innerHeight - nav.offsetHeight}px`;
+
+
+
 import supabase from "./js/db.js";
 
 const { data } = await supabase.from("topics").select("*");
 
 console.log(data);
 
-let forum = document.querySelector("#forum");
-
 for (const topic of data) {
     const {title, content, author_id, id} = topic;
-    console.log(id);
 
     const div = document.createElement("div");
     forum.appendChild(div);
@@ -29,8 +34,11 @@ for (const topic of data) {
     div.appendChild(topic_author);
     /* Dentre outras */
 
-    div.addEventListener("click", (e) => {
-        window.location.href = `./topic.html?id=${id}`;
+    console.log(id);
+    div.addEventListener("click", () => {
+        let url = `./topic.html?id=${id}`;
+        window.location.href = url;
+        console.log(url);
     });
 }
 

@@ -1,0 +1,44 @@
+#type {
+    height: 20vh;
+}
+#type textarea {
+    margin-top: 1.5vh;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    flex: 1;
+}
+#type textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+#type-foot {
+    flex: 0;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+#type, #something, #something2 {
+    margin-top: 2vh;
+}
+
+#forum::-webkit-scrollbar {
+    display: none;
+}
+#forum {
+    flex: 1;
+    overflow: auto;
+}
+#forum::-webkit-scrollbar {
+    display: none;
+}
+.topico, #type {
+    margin-bottom: 2vh;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+.topico, #type {
+    padding: 1.5vh 1vw;
+}

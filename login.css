@@ -1,0 +1,12 @@
+main {
+    margin-top: 5vh;
+    justify-content: center;
+    flex: 1;
+}
+main section {
+    width: 30%;
+    gap: 1vh;
+}
+form {
+    gap: 0.5vh;
+}
