@@ -1,15 +1,25 @@
 import supabase from "./js/db.js";
 
+
+// Conseguir o parametro na URL
 const params = new URLSearchParams(window.location.search);
 const topic_id = params.get("id");
 
+// Decobre usuário
+const { data: { user }, error: auth_error } = await supabase.auth.getUser();
 
+if (auth_error) {console.log(auth_error)}
+const type = document.getElementById("type");
+if (!user) {
+    type.classList.add("display-none");
+}
+
+// Pesquisa o tópico principal
 const { data } = await supabase.from("topics").select("*").eq("id", topic_id).single();
-
 console.log(data);
-
 const {title, content, author_id} = data;
 
+// Coloca o tópico principal
 let forum = document.querySelector("#forum");
 
 const topic_div = document.createElement("div");
@@ -59,5 +69,22 @@ for (const reply of replies) {
     div.appendChild(author);
 }
 
+// Novas Respostas
 
-console.log(author);
+const submit_reply = document.getElementById("submit-reply");
+
+submit_reply.addEventListener("click", async () => {
+    if (!user) return;
+
+    const textarea = document.getElementById("new-reply");
+    const text = textarea.value;
+
+    const { data, error } = await supabase
+        .from("replies")
+        .insert({
+            topic_id: topic_id,
+            author_id: user.id,
+            content: text,
+        })
+        .select();
+})

@@ -12,11 +12,9 @@
             <a href="index.html"><img src="assets/images/logo.png" alt=""></a>
             <div class="line links">
                 <h2><a href="about.html">SOBRE</a></h2>
-                <h2><a href="discuss.html">DISCUSSÃO</a></h2>
-                <h2><a href="about.html">OBRAS</a></h2>
-                <h2><a href="about.html">CONTATO</a></h2>
                 <h2><a href="login.html">LOGIN</a></h2>
                 <h2><a href="signup.html">SIGNUP</a></h2>
+                <h2><a id="logout" href="">LOGOUT</a></h2>
             </div>
         </nav>
     </header>
@@ -35,10 +33,10 @@
                 <!-- JS pesquisa o topico e suas respostas e os põe aqui -->
             </section>
             <div id="type" class="column">
-                <label for="new-reply" style="display: none;">Inicie um tópico</label>
+                <label for="new-reply" style="display: none;">Escreva uma resposta</label>
                 <textarea placeholder="Digite aqui..!" id="new-reply"></textarea>
                 <div id="type-foot" class="line">
-                    <button id="topic-submit">submit</button>
+                    <button id="submit-reply">submit</button>
                 </div>
             </div>
         </section>
@@ -54,5 +52,6 @@
     </footer>
 
     <script type="module" src="topic.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
