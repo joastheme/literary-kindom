@@ -9,10 +9,13 @@ const pagesize = 10;
 loadPage(0, pagesize, forum);
 let pages = 1;
 
-loadmore.addEventListener("click", () => {
-    loadPage(pages, pagesize, forum);
+loadmore.addEventListener("click", async (e) => {
+    const button = e.currentTarget;
+    const no_more = await loadPage(pages, pagesize, forum);
     pages++;
-})
+    console.log (no_more);
+    if (no_more) button.remove();
+});
 
 const topic_submit = document.querySelector("#topic-submit");
 

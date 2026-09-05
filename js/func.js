@@ -43,8 +43,6 @@ async function loadPage(page, pagesize, forum) {
         .order("created_at", { ascending: false })
         .range(from, to);
 
-    console.log(data);
-
     if (error) {
         console.log(error);
         return;
@@ -53,6 +51,9 @@ async function loadPage(page, pagesize, forum) {
     for (const topic of data) {
         createTopic(topic, forum);
     }
+
+    return data.length !== pagesize;
+
 }
 
 export { loadPage, createTopic };
