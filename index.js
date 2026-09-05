@@ -36,7 +36,7 @@ for (const topic of data) {
 
     console.log(id);
     div.addEventListener("click", () => {
-        let url = `./topic.html?id=${id}`;
+        let url = `./topic?id=${id}`;
         window.location.href = url;
         console.log(url);
     });
