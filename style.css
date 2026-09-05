@@ -13,7 +13,7 @@
     src: url("assets/fonts/Crimson/CrimsonText-Regular.ttf");
 }
 * {
-    font-family: crimson;
+    font-family: crimson, sans-serif;
     margin: 0;
 }
 body {
@@ -36,7 +36,7 @@ nav {
     padding: 2.5vh 5vw;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.1vh solid black;
+    border-bottom: 0.1vh solid #53593D;
 }
 main, footer {
     padding: 0 5vw;
@@ -96,7 +96,7 @@ main {
 .topico, #type, .reply {
     margin-bottom: 2vh;
     border: 1px;
-    border-color: black;
+    border-color: #53593D;
     border-style: solid;
     border-radius: 10px;
 }

@@ -35,15 +35,17 @@
         <section id="mainsection">
             <section id="forum">
                 <div id="type" class="column">
-                    <label for="starttopic">Inicie um tópico</label>
-                    <textarea placeholder="Digite aqui..!" id="starttopic"></textarea>
+                    <label for="start-topic-title" style="display: none;">Título do tópico</label>
+                    <input placeholder="Título" id="start-topic-title" name="start-topic-title" type="text">
+                    <label for="start-topic" style="display: none;">Inicie um tópico</label>
+                    <textarea placeholder="Digite aqui..!" id="start-topic"></textarea>
                     <div id="type-foot" class="line">
                         <div>
                             <button>outra</button>
                             <button>coisa</button>
                         </div>
                         <div>
-                            <button>submit</button>
+                            <button id="topic-submit">submit</button>
                         </div>
                     </div>
                 </div>

@@ -1,15 +1,22 @@
 #type {
-    height: 20vh;
+    height: 19rem;
 }
-#type textarea {
+#start-topic, #start-topic-title {
     margin-top: 1.5vh;
     resize: none;
     border: none;
     background-color: transparent;
     width: 100%;
+}
+#start-topic {
     flex: 1;
 }
-#type textarea:focus {
+#start-topic-title {
+    height: 2rem;
+    border-bottom: 0.05vh solid #53593D;
+    font-size: 1.5rem;
+}
+#start-topic:focus, #start-topic-title:focus {
     outline: none;
     box-shadow: none;
 }
