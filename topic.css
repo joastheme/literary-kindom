@@ -5,3 +5,21 @@
 .replyImg {
     width: 10%;
 }
+
+#new-reply {
+    margin-top: 1.5vh;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+#new-reply{
+    flex: 1;
+}
+#new-reply:focus {
+    outline: none;
+    box-shadow: none;
+}
+#type {
+    height: 9rem;
+}

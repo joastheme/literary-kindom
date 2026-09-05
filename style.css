@@ -52,8 +52,9 @@ a:hover {
     color: #F2B441;
 }
 main {
+    flex: 1;
     justify-content: space-between;
-    height: calc(100vh - 43px);
+    min-height: 0;
 }
 
 /* --------------- SPECIFIC --------------- */
@@ -87,8 +88,9 @@ main {
 #mainsection {
     padding-top: 3vh;
     width: 50%;
+    overflow-y: auto;
 }
-#mainsection, #something, #something2 {
+#something, #something2 {
     padding-top: 0;
     height: 100%;
 }
@@ -105,4 +107,21 @@ main {
 }
 .reply {
     flex: 1;
+}
+
+#type-foot {
+    flex: 0;
+    justify-content: space-between;
+    margin-bottom: 1vh;
+}
+#type, #something, #something2 {
+    margin-top: 2vh;
+}
+#type {
+    margin-bottom: 2vh;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 1.5vh 1vw;
 }
